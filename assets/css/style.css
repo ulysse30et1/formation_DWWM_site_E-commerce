@@ -1,0 +1,34 @@
+header {
+    grid-area: header;
+}
+
+/* === modification de la barre de nav === */
+nav {
+    grid-area: nav;
+}
+
+.nav-link {
+    /* color: blueviolet; */
+}
+
+#containerProduct {
+    grid-area: container;
+}
+
+footer {
+    grid-area: footer;
+}
+
+
+
+@media (min-width: 900px) {
+    #smallScreen {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    #largeScreen {
+        display: none;
+    }
+}
