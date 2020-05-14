@@ -25,10 +25,13 @@ document.getElementById('smallScreen').innerHTML = (`
       <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Marques</a>
       <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-      </div>
+        <a class="dropdown-item" href="#">samsung</a>
+        <a class="dropdown-item" href="#">apple</a>
+        <a class="dropdown-item" href="#">Fossil</a>
+        <a class="dropdown-item" href="#">fitbit</a>
+        <a class="dropdown-item" href="#">huawei</a>
+        <a class="dropdown-item" href="#">kiwip</a>
+        </div>
     </li>
     </ul>
   </div>
@@ -57,13 +60,12 @@ document.getElementById('largeScreen').innerHTML = (`
 <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Marques</a>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
+    <a class="dropdown-item" href="#">samsung</a>
+    <a class="dropdown-item" href="#">apple</a>
+    <a class="dropdown-item" href="#">Fossil</a>
+    <a class="dropdown-item" href="#">fitbit</a>
+    <a class="dropdown-item" href="#">huawei</a>
+    <a class="dropdown-item" href="#">kiwip</a>
     </div>
 </li>
 `)
-
-document.getElementById('test').addEventListener('click', function () {
-    document.querySelector('body').style.backgroundColor = 'red'
-});

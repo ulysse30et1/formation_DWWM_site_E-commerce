@@ -19,16 +19,46 @@ footer {
     grid-area: footer;
 }
 
+/* config pour ecrant < 900px */
+@media (max-width: 900px) {
+    body {
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(4, 1fr);
 
-
-@media (min-width: 900px) {
-    #smallScreen {
+        grid-template-areas:
+        "header header header header"
+        "nav nav nav nav"
+        "container container container container"
+        "footer footer footer footer"
+        ;
+    }
+    #largeScreen {
         display: none;
     }
 }
 
-@media (max-width: 900px) {
-    #largeScreen {
+/* config pour ecrant > 900px */
+@media (min-width: 900px) {
+    body {
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+
+        grid-template-areas:
+        "header header header header"
+        "nav container container container"
+        "nav container container container"
+        "footer footer footer footer"
+        ;
+    }
+
+    #smallScreen {
         display: none;
+    }
+
+    iframe {
+        width: 50em;
+        height: 20em;
     }
 }
