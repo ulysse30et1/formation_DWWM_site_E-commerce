@@ -26,9 +26,9 @@ document.getElementById('smallScreen').innerHTML = (`
       <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Marques</a>
       <div class="dropdown-menu">
         <a class="dropdown-item" href="#">samsung</a>
-        <a class="dropdown-item" href="#">apple</a>
         <a class="dropdown-item" href="#">Fossil</a>
         <a class="dropdown-item" href="#">fitbit</a>
+        <a class="dropdown-item" href="#">apple</a>
         <a class="dropdown-item" href="#">huawei</a>
         <a class="dropdown-item" href="#">kiwip</a>
         </div>
@@ -60,12 +60,9 @@ document.getElementById('largeScreen').innerHTML = (`
 <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Marques</a>
     <div class="dropdown-menu">
-    <a class="dropdown-item" href="#">samsung</a>
-    <a class="dropdown-item" href="#">apple</a>
-    <a class="dropdown-item" href="#">Fossil</a>
-    <a class="dropdown-item" href="#">fitbit</a>
-    <a class="dropdown-item" href="#">huawei</a>
-    <a class="dropdown-item" href="#">kiwip</a>
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
     </div>
 </li>
 `)
