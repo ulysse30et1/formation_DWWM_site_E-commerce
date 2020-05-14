@@ -8,7 +8,7 @@ nav {
 }
 
 .nav-link {
-    color: blueviolet;
+    /* color: blueviolet; */
 }
 
 #containerProduct {
@@ -18,6 +18,8 @@ nav {
 footer {
     grid-area: footer;
 }
+
+
 
 @media (min-width: 900px) {
     #smallScreen {
