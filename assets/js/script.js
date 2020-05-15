@@ -131,4 +131,3 @@ let footer = document.querySelector('footer').innerHTML = (`
 `)
 
 //affichage des produits en fonction des selections
-
