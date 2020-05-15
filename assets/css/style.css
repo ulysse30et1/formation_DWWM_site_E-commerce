@@ -1,5 +1,6 @@
 header {
     grid-area: header;
+    background-color: aquamarine;
 }
 
 /* === modification de la barre de nav === */
@@ -7,12 +8,12 @@ nav {
     grid-area: nav;
 }
 
-.nav-link {
-    /* color: blueviolet; */
-}
-
 #containerProduct {
     grid-area: container;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 10px;
+    column-gap: 10px;
 }
 
 footer {
@@ -33,28 +34,21 @@ footer {
         "footer footer footer footer"
         ;
     }
-    #largeScreen {
-        display: none;
-    }
 }
 
 /* config pour ecrant > 900px */
 @media (min-width: 900px) {
     body {
         display: grid;
-        grid-template-rows: repeat(4, 1fr);
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows:1fr 2fr 2fr 10%;
+        grid-template-columns: 10% 1fr 1fr 1fr;
 
         grid-template-areas:
         "header header header header"
-        "nav container container container"
-        "nav container container container"
+        "nav nav nav nav"
+        "container container container container"
         "footer footer footer footer"
         ;
-    }
-
-    #smallScreen {
-        display: none;
     }
 
     iframe {
