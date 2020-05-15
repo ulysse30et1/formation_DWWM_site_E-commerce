@@ -1,0 +1,58 @@
+header {
+    grid-area: header;
+    background-color: aquamarine;
+}
+
+/* === modification de la barre de nav === */
+nav {
+    grid-area: nav;
+}
+
+#containerProduct {
+    grid-area: container;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+footer {
+    grid-area: footer;
+}
+
+/* config pour ecrant < 900px */
+@media (max-width: 900px) {
+    body {
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+
+        grid-template-areas:
+        "header header header header"
+        "nav nav nav nav"
+        "container container container container"
+        "footer footer footer footer"
+        ;
+    }
+}
+
+/* config pour ecrant > 900px */
+@media (min-width: 900px) {
+    body {
+        display: grid;
+        grid-template-rows:1fr 2fr 2fr 10%;
+        grid-template-columns: 10% 1fr 1fr 1fr;
+
+        grid-template-areas:
+        "header header header header"
+        "nav nav nav nav"
+        "container container container container"
+        "footer footer footer footer"
+        ;
+    }
+
+    iframe {
+        width: 50em;
+        height: 20em;
+    }
+}

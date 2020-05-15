@@ -1,0 +1,43 @@
+Apple:
+Apple Watch Serie 3 = AWS3-001
+Apple Watch Serie 5 = AWS5-001
+
+---------------------------------
+
+FitBit:
+Fitbit Versa One = FVO-001
+Fitbit Versa Two = FVT-001
+
+---------------------------------
+
+Fossil:
+Fossil Carlyle = FCAR-001
+				 FCAR-002
+Fossil Charter = FCHA-001
+				 FCHA-002
+Fossil Collider = FCOL-001
+Fossil Julianna = FJUL-001
+				  FJUL-002
+Fossil Sport = FSPO-001
+
+---------------------------------
+
+Huawei:
+Huawei GT Elegant = HGTE-001
+Huawei Watch GT One = HWGTO-001
+Huawei Watch GT Two = HWGTT-001
+Huawei Watch Sport = HWSPT-001
+
+---------------------------------
+
+Kiwip:
+Kiwip Watch =KIW-001
+
+---------------------------------
+
+Samsung:
+Samsung Galaxy Active One = SGAO-001
+Samsung Galaxy Active Two = SGAO-001
+Samsung Galaxy Fit = SGF-001
+Samsung Galaxy Watch = SGW-001
+
