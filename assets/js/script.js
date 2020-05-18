@@ -108,13 +108,13 @@ let apple = [
 	["Apple Watch Serie 5", "200 €", "AWS5-001", "descriptif"]
 ];
 
-let Huawei = [
-	["Huawei GT Elegant", "200 €", "HGTE-001", "descriptif"],
+let huawei = [
+	["huawei GT Elegant", "200 €", "HGTE-001", "descriptif"],
 
-	["Huawei Watch GT One", "200 €", "HWGTO-001", "descriptif"],
-	["Huawei Watch GT Two", "200 €", "HWGTT-001", "descriptif"],
+	["huawei Watch GT One", "200 €", "HWGTO-001", "descriptif"],
+	["huawei Watch GT Two", "200 €", "HWGTT-001", "descriptif"],
 
-	["Huawei Watch Sport", "200 €", "HWSPT-001", "descriptif"]
+	["huawei Watch Sport", "200 €", "HWSPT-001", "descriptif"]
 ]
 
 let kiwip = [
@@ -155,6 +155,12 @@ allLinks.forEach(addEventListener('click', function () {
 	} else if (categories === "apple") {
 		createCards(apple);
 
+	} else if (categories === "huawei") {
+		createCards(huawei);
+
+	} else if (categories === "kiwip") {
+		createCards(kiwip);
+
 	} else {
 		createCards(all);
 	}
@@ -179,10 +185,15 @@ function createCards(x) {
 		cardBody.className = 'card-body';
 
 		let title = document.createElement('h5');
-		title.innerText = element[0]
+		title.innerText = element[0];
 		title.className = 'card-title';
 
+		let text = document.createElement ('p');
+		text.className = 'card-text';
+		text.innerText = element[3];
+
 		cardBody.appendChild(title);
+		cardBody.appendChild(text);
 		card.appendChild(cardBody);
 		document.getElementById('containerProduct').appendChild(card);	
 	})
