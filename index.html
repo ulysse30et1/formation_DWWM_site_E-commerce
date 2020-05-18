@@ -25,85 +25,86 @@
 <!--=====================================================================-->
   <!-- === barre de navigation ========================================= -->
 
-  <nav id="smallScreen" class="navbar navbar-expand-sm navbar-light bg-light">
+  <nav id="smallScreen" class="navbar navbar-expand-sm navbar-light bg-info">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse sticky-top navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
+      <div class="navbar-nav mr-auto">
 
         <li class="nav-item">
-          <a class="nav-link text-dark" id="all" href="#">toutes nos montres</a>
+          <a class="nav-link text-light" id="all" href="#">toutes nos montres</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link text-dark" id="sportives" href="#">sportives</a>
+          <a class="nav-link text-light" id="sportives" href="#">sportives</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link text-dark" id="urbaines" href="#">urbaines</a>
+          <a class="nav-link text-light" id="urbaines" href="#">urbaines</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link text-dark" id="hybrides" href="#">hybrides</a>
+          <a class="nav-link text-light" id="hybrides" href="#">hybrides</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link text-dark" id="enfants" href="#">enfants</a>
+          <a class="nav-link text-light" id="enfants" href="#">enfants</a>
         </li>
 
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-dark" data-toggle="dropdown" href="#" role="button"
+          <a class="nav-link dropdown-toggle text-light" data-toggle="dropdown" href="#" role="button"
             aria-haspopup="true"
             aria-expanded="false">Marques</a>
-          <div class="dropdown-menu bg-light">
-            <a class="dropdown-item text-dark" id="samsung" href="#">samsung</a>
-            <a class="dropdown-item text-dark" id="Fossil" href="#">Fossil</a>
-            <a class="dropdown-item text-dark" id="fitbit" href="#">fitbit</a>
-            <a class="dropdown-item text-dark" id="apple" href="#">apple</a>
-            <a class="dropdown-item text-dark" id="huawei" href="#">huawei</a>
-            <a class="dropdown-item text-dark" id="kiwip" href="#">kiwip</a>
+          <div class="dropdown-menu bg-info">
+            <a class="dropdown-item text-light" id="samsung" href="#">samsung</a>
+            <a class="dropdown-item text-light" id="Fossil" href="#">Fossil</a>
+            <a class="dropdown-item text-light" id="fitbit" href="#">fitbit</a>
+            <a class="dropdown-item text-light" id="apple" href="#">apple</a>
+            <a class="dropdown-item text-light" id="huawei" href="#">huawei</a>
+            <a class="dropdown-item text-light" id="kiwip" href="#">kiwip</a>
           </div>
         </li>
-      </ul>
+
+<!-- === affichage du Panier === -->
+
+            <div id="panier">
+              <div id="modal">
+                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
+                  Panier
+                </button>
+                    <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Panier</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">×</span>
+                              </button>
+                          </div>
+                          <div class="modal-body">
+                            ...
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-success">Save changes</button>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+              </div>
+            </div>
+       </ul>
     </div>
   </nav>
 
   <!-- === affichage des produits === -->
-  <div id="containerProduct">
+  <div id="containerProduct"></div>
 
-    <div id="panier">
-      <div id="modal">
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-          Panier
-        </button>
 
-        <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-          aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Panier</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">×</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                ...
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
 
 
 <!--=====================================================================-->
@@ -165,7 +166,7 @@
       </div>
     </div>
     <div class="footer-copyright text-center py-3 bg-dark">© 2020 Copyright:
-      <a href="https://mdbootstrap.com/" class="text-warning">By Ulysse Chazot, Gautier Chassang, Kevyn
+      <a href="https://mdbootstrap.com/" class="text-info">By Ulysse Chazot, Gautier Chassang, Kevyn
         Amaral.</a>
     </div>
   </footer>
