@@ -1,20 +1,26 @@
 
 body{
     grid-area: body;
-    background: linear-gradient(165deg, rgba(255,255,255, 1), rgba(0, 150, 220, 0.5));
+    background: #343A40;
+}
+header{
+    overflow: hidden;
 }
 
 .img-gradient {
     grid-area: header;
+    height: auto;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(0, 150, 220, 0.5)),
-    url(../img/ConnectingTime/ConnectingTime_800.png) 150px no-repeat,
-    linear-gradient(145deg, rgba(40, 22, 22, 1), rgba(12, 0, 184, 0.719))
-    
+    url(../img/ConnectingTime/ConnectingTime_800.png) 50% 5% no-repeat,
+    linear-gradient(145deg, rgba(40, 22, 22, 1), rgba(12, 0, 184, 0.719));
+    background-size: contain;
+    content: ' (not fixed)';
 }
-
 /* === modification de la barre de nav === */
 nav {
     grid-area: nav;
+    padding: 1em;
+    height: 3em;
 }
 
 #containerProduct {
@@ -30,7 +36,7 @@ footer {
     background-color: #6C757D;
 }
 
-/* config pour ecrant < 900px */
+/* config pour ecran < 900px */
 @media (max-width: 900px) {
     body {
         display: grid;
@@ -45,8 +51,19 @@ footer {
         ;
     }
 }
-
-/* config pour ecrant > 900px */
+@media screen and (max-width: 899px) {
+    header.img-gradient {
+        grid-area: header;
+        grid-auto-rows: auto;
+        height: 20%;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(0, 150, 220, 0.5)),
+            url(../img/ConnectingTime/ConnectingTime_400.png) 50% 5% no-repeat,
+            linear-gradient(145deg, rgba(40, 22, 22, 1), rgba(12, 0, 184, 0.719));
+        background-size: contain;
+        content: ' (not fixed)';
+    }
+}
+/* config pour ecran > 900px */
 @media (min-width: 900px) {
     body {
         display: grid;
