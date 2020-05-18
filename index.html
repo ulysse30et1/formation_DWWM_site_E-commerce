@@ -33,6 +33,11 @@
 
     <div class="collapse sticky-top navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
+
+        <li class="nav-item">
+          <a class="nav-link text-dark" id="all" href="#">toutes nos montres</a>
+        </li>
+
         <li class="nav-item">
           <a class="nav-link text-dark" id="sportives" href="#">sportives</a>
         </li>
@@ -66,10 +71,43 @@
     </div>
   </nav>
 
+  <!-- === affichage des produits === -->
+  <div id="containerProduct">
+
+    <div id="panier">
+      <div id="modal">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+          Panier
+        </button>
+
+        <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Panier</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
 <!--=====================================================================-->
-<!--===================FOOTER============================================-->
-
-
+<!-- === Footer === -->
 
 
   <footer class="page-footer font-small blue pt-4 bg-dark text-white">
@@ -131,37 +169,7 @@
         Amaral.</a>
     </div>
   </footer>
-<!--=====================================================================-->
-<!--================== PRODUITS =========================================-->
 
-<div id="containerProduct">
-      <div id="modal">
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-          Panier
-        </button>
-
-        <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-          aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Panier</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">×</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                ...
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
 
 <!--=====================================================================-->
@@ -170,7 +178,6 @@
         <script src="assets/js/script.js"></script>
 
 <!--=====================================================================-->
-<!--<script src="assets/js/panier.js"></script> -->
 
     <script src="assets/lib/fontawsome/fontawesome-free-5.13.0-web/js/all.min.js"></script>
  
