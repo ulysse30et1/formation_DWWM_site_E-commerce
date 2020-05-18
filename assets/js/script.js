@@ -1,6 +1,7 @@
 //modification de l'affichage des produits en fonction de la selection
+//tab des categories 
+let all = [];
 
-// creaation des tableau pour les categories
 let sportives = [];
 
 let urbaines = [];
@@ -20,77 +21,71 @@ let samsung = [
 ];
 
 let Fossil = [
-  ["Fossil Carlyle", "200 €", "FCAR-001", "descriptif"],
-  ["Fossil Carlyle", "200 €", "FCAR-002", "descriptif"],
+	["Fossil Carlyle", "200 €", "FCAR-001", "descriptif"],
+	["Fossil Carlyle", "200 €", "FCAR-002", "descriptif"],
 
-  ["Fossil Charter", "200 €", "FCHA-001", "descriptif"],
-  ["Fossil Charter", "200 €", "FCHA-002", "descriptif"],
+	["Fossil Charter", "200 €", "FCHA-001", "descriptif"],
+	["Fossil Charter", "200 €", "FCHA-002", "descriptif"],
 
-  ["Fossil Collider", "200 €", "FCOL-001", "descriptif"],
+	["Fossil Collider", "200 €", "FCOL-001", "descriptif"],
 
-  ["Fossil Julianna", "200 €", "FJUL-001", "descriptif"],
-  ["Fossil Julianna", "200 €", "FJUL-002", "descriptif"],
+	["Fossil Julianna", "200 €", "FJUL-001", "descriptif"],
+	["Fossil Julianna", "200 €", "FJUL-002", "descriptif"],
 
-  ["Fossil Sport ", "200 €", "FSPO-001", "descriptif"]
+	["Fossil Sport ", "200 €", "FSPO-001", "descriptif"],
 ];
 
 let fitbit = [
-  ["Fitbit Versa One", "200 €", "FVO-001", "descriptif"],
-  ["Fitbit Versa Two", "200 €", "FVT-001", "descriptif"]
+	["Fitbit Versa One", "200 €", "FVO-001", "descriptif"],
+	["Fitbit Versa Two", "200 €", "FVT-001", "descriptif"]
 ];
 
 let apple = [
-  ["Apple Watch Serie 3", "200 €", "AWS3-001", "descriptif"],
-  ["Apple Watch Serie 5", "200 €", "AWS5-001", "descriptif"]
+	["Apple Watch Serie 3", "200 €", "AWS3-001", "descriptif"],
+	["Apple Watch Serie 5", "200 €", "AWS5-001", "descriptif"]
 ];
 
-// selection des liens 
+//recuperation de l'ID de l'element au clique 
+
 let allLinks = document.querySelectorAll('a');
 
 allLinks.forEach(addEventListener('click', function () {
+	let categories = this.event.target.id;
 
-  this.console.log(this.event.target.id)
+	if (categories === "sportives") {
+		createCards(sportives);
 
-  if (this.event.target.id === "sportives") {
-    console.log('test1')
-  } else if (this.event.target.id === "urbaines") {
-    console.log('test2')
+	} else if (categories === "urbaines") {
+		createCards(urbaines);
 
-  } else if (this.event.target.id === "hybrides") {
-    console.log('test3')
+	} else if (categories === "hybrides") {
+		createCards(hybrides);
 
-  } else if (this.event.target.id === "enfants") {
-    console.log('test4')
+	} else if (categories === "urbaines") {
+		createCards(urbaines);
 
-  }else if (this.event.target.id === "samsung") {
-    console.log('test5')
+	} else if (categories === "enfants") {
+		createCards(enfants);
 
-  }else if (this.event.target.id === "Fossil") {
-    console.log('test6')
+	} else if (categories === "samsung") {
+		createCards(samsung);
 
-  }else if (this.event.target.id === "fitbit") {
-    console.log('test7')
+	} else if (categories === "Fossil") {
+		createCards(Fossil);
 
-  }else if (this.event.target.id === "apple") {
-    console.log('test8')
+	} else if (categories === "fitbit") {
+		createCards(fitbit);
 
-  } else {
-    //afficher tuute les cards
-    console.log('test9')
-  }
+	} else if (categories === "apple") {
+		createCards(apple);
 
+	} else {
+		createCards(all);
+	}
 }))
 
-function newCard () {
-  let div = document.createElement('div');
-  div.innerHTML = (`<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
-  </div>
-</div>`)
-  document.getElementById('containerProduct').insertAdjacentElement('afterbegin' ,div)
+
+function createCards(x) {
+	//creation d'une cards en fonction des ellements du tableau
+	x.forEach(element => document.getElementById('containerProduct').insertAdjacentHTML("afterbegin", "nom = " + element[0] + "prix = " + element[1] + "ref = " + element[2] + "description du produit " + element[3] + "</br>"));
 }
