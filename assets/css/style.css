@@ -3,9 +3,6 @@ body{
     grid-area: body;
     background: #343A40;
 }
-header{
-    overflow: hidden;
-}
 
 .img-gradient {
     grid-area: header;
@@ -55,7 +52,7 @@ footer {
     header.img-gradient {
         grid-area: header;
         grid-auto-rows: auto;
-        height: 5vh;
+        height: 20vh;
         background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(0, 150, 220, 0.5)),
             url(../img/ConnectingTime/ConnectingTime_400.png) 50% 5% no-repeat,
             linear-gradient(145deg, rgba(40, 22, 22, 1), rgba(12, 0, 184, 0.719));
