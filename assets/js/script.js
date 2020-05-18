@@ -121,13 +121,14 @@ let kiwip = [
 	["Kiwip", "200€", "KIW-001", "descriptif"]
 ]
 
+createCards(all);
 //recuperation de l'ID de l'element au clique 
-
 let allLinks = document.querySelectorAll('a');
 
 allLinks.forEach(addEventListener('click', function () {
 	let categories = this.event.target.id;
 
+	// affichage en fonction de la selection 
 	if (categories === "sportives") {
 		createCards(sportives);
 
@@ -165,6 +166,8 @@ allLinks.forEach(addEventListener('click', function () {
 		createCards(all);
 	}
 }))
+
+window.lo
 
 function createCards(x) {
 	//supprime tout contenus deja present 
