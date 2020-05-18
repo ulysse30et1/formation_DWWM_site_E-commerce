@@ -84,7 +84,6 @@ allLinks.forEach(addEventListener('click', function () {
 	}
 }))
 
-
 function createCards(x) {
 	//creation d'une cards en fonction des ellements du tableau
 	x.forEach(element => document.getElementById('containerProduct').insertAdjacentHTML("afterbegin", "nom = " + element[0] + "prix = " + element[1] + "ref = " + element[2] + "description du produit " + element[3] + "</br>"));
