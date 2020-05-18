@@ -18,14 +18,11 @@
 
   <!--=====================================================================-->
   <!--==================== Header =========================================-->
-
   <header class="img-gradient"></header>
-
-
   <!--=====================================================================-->
   <!-- === barre de navigation ========================================= -->
 
-  <nav id="smallScreen" class="navbar navbar-expand-sm navbar-light bg-light">
+  <nav id="smallScreen" class="navbar navbar-expand-sm navbar-light bg-info">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -78,6 +75,34 @@
 
 
   <footer class="page-footer font-small blue pt-4 bg-dark text-white">
+    <div id="panier">
+      <div id="modal">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+          Panier
+        </button>
+
+        <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Panier</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="container-fluid text-center text-md-left bg-dark">
       <div class="row">
         <div class="col-12 mt-md-0 mt-3 text-center">
@@ -134,37 +159,10 @@
       <a href="https://mdbootstrap.com/" class="text-warning">By Ulysse Chazot, Gautier Chassang, Kevyn
         Amaral.</a>
     </div>
-
+    <!-- === JavaScript === -->
     <!-- === affichage des produits === -->
-    <div id="panier">
-      <div id="modal">
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-          Panier
-        </button>
-
-        <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-          aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Panier</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">×</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                ...
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> 
   </footer>
+
   <!--=====================================================================-->
   <!-- === JavaScript === -->
 

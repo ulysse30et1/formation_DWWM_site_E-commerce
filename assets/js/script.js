@@ -1,7 +1,7 @@
 //modification de l'affichage des produits en fonction de la selection
 //tab des categories 
 let all = [
-	["Samsung Galaxy Active One", "200 €", "SGAO-001", "descriptif", "SGAO-001.svg"],
+	["Samsung Galaxy Active One", "200 €", "SGAO-001", "descriptif"],
 
 	["Samsung Galaxy Active Two", "200 €", "SGAT-001", "descriptif"],
 
@@ -176,7 +176,7 @@ function createCards(x) {
 
 		let img = document.createElement('img');
 		img.className = 'card-img-top'
-		img.src = 'assets/img/'+ element[2] +'.svg';
+		img.src = 'assets/img/' + element[2] + '.svg';
 
 		let cardBody = document.createElement('div');
 		cardBody.className = 'card-body';
@@ -185,11 +185,11 @@ function createCards(x) {
 		title.innerText = element[0];
 		title.className = 'card-title';
 
-		let text = document.createElement ('p');
+		let text = document.createElement('p');
 		text.className = 'card-text';
 		text.innerHTML = element[3] + "</br>" + "ref : " + element[2];
 
-		let add = document.createElement ('a');
+		let add = document.createElement('a');
 		add.href = "#";
 		add.className = "btn btn-primary";
 		add.innerText = "ajouter au panier : " + element[1];
@@ -199,6 +199,6 @@ function createCards(x) {
 		card.appendChild(cardBody);
 		card.appendChild(img);
 		card.appendChild(add);
-		document.getElementById('containerProduct').appendChild(card);	
+		document.getElementById('containerProduct').appendChild(card);
 	})
 }
