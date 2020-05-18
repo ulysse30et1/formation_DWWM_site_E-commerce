@@ -1,9 +1,9 @@
 //modification de l'affichage des produits en fonction de la selection
 //tab des categories 
 let all = [
-	["Samsung Galaxy Active One", "200 €", "SGAO-001", "descriptif"],
+	["Samsung Galaxy Active One", "200 €", "SGAO-001", "descriptif", "SGAO-001.svg"],
 
-	["Samsung Galaxy Active Two", "200 €", "SGAO-002", "descriptif"],
+	["Samsung Galaxy Active Two", "200 €", "SGAT-001", "descriptif"],
 
 	["Samsung Galaxy Fit", "200 €", "SGF-001", "descriptif"],
 
@@ -76,7 +76,7 @@ let enfants = [
 let samsung = [
 	["Samsung Galaxy Active One", "200 €", "SGAO-001", "descriptif"],
 
-	["Samsung Galaxy Active Two", "200 €", "SGAO-002", "descriptif"],
+	["Samsung Galaxy Active Two", "200 €", "SGAT-001", "descriptif"],
 
 	["Samsung Galaxy Fit", "200 €", "SGF-001", "descriptif"],
 
@@ -169,17 +169,14 @@ allLinks.forEach(addEventListener('click', function () {
 function createCards(x) {
 	//supprime tout contenus deja present 
 	document.getElementById('containerProduct').innerHTML = " ";
-	//creation d'une cards en fonction des ellements du tableau
-	x.forEach(element => document.getElementById('containerProduct').insertAdjacentHTML("beforeend", "nom = " + element[0] + "prix = " + element[1] + "ref = " + element[2] + "description du produit " + element[3] + "</br>"));
-}
-
-function createCards(x) {
-	//supprime tout contenus deja present 
-	document.getElementById('containerProduct').innerHTML = " ";
 
 	x.forEach(element => {
 		let card = document.createElement('div');
 		card.className = 'card';
+
+		let img = document.createElement('img');
+		img.className = 'card-img-top'
+		img.src = 'assets/img/'+ element[2] +'.svg';
 
 		let cardBody = document.createElement('div');
 		cardBody.className = 'card-body';
@@ -190,11 +187,18 @@ function createCards(x) {
 
 		let text = document.createElement ('p');
 		text.className = 'card-text';
-		text.innerText = element[3];
+		text.innerHTML = element[3] + "</br>" + "ref : " + element[2];
+
+		let add = document.createElement ('a');
+		add.href = "#";
+		add.className = "btn btn-primary";
+		add.innerText = "ajouter au panier : " + element[1];
 
 		cardBody.appendChild(title);
 		cardBody.appendChild(text);
 		card.appendChild(cardBody);
+		card.appendChild(img);
+		card.appendChild(add);
 		document.getElementById('containerProduct').appendChild(card);	
 	})
 }

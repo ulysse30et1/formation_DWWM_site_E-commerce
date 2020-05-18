@@ -21,16 +21,15 @@ header {
 /* === modification de la barre de nav === */
 nav {
     grid-area: nav;
-    padding: 1em;
-    height: 3em;
 }
 
 #containerProduct {
+    margin: 25px;
     grid-area: container;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    row-gap: 10px;
-    column-gap: 10px;
+    row-gap: 25px;
+    column-gap: 25px;
 }
 
 footer {
@@ -53,15 +52,34 @@ footer {
         ;
     }
 
+    #containerProduct {
+        margin: 25px;
+        grid-area: container;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 25px;
+        column-gap: 25px;
+    }
+
     header.img-gradient {
         grid-area: header;
         grid-auto-rows: auto;
-        height: 20vh;
         background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(0, 150, 220, 0.5)),
             url(../img/ConnectingTime/ConnectingTime_400.png) 50% 5% no-repeat,
             linear-gradient(145deg, rgba(40, 22, 22, 1), rgba(12, 0, 184, 0.719));
         background-size: contain;
         content: ' (not fixed)';
+    }
+}
+
+@media (max-width: 450px) {
+    #containerProduct {
+        margin: 25px;
+        grid-area: container;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 25px;
+        column-gap: 25px;
     }
 }
 
